@@ -1,0 +1,21 @@
+{
+   "background": {
+      "service_worker": "background.min.js"
+   },
+   "content_scripts": [ {
+      "css": [ "progress.css" ],
+      "js": [ "jquery.js", "jquery.scrollTo.min.js", "moment.js", "draftback.min.js" ],
+      "matches": [ "*://docs.google.com/*/*/edit*" ]
+   } ],
+   "description": "Watch the writing process unfold - play back a Google Doc as if it were a movie",
+   "host_permissions": [ "*://docs.google.com/*" ],
+   "manifest_version": 3,
+   "name": "Draftback",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.25",
+   "web_accessible_resources": [ {
+      "matches": [ "*://docs.google.com/*" ],
+      "resources": [ "images/*.png", "images/*.gif", "injected.js" ]
+   } ]
+}

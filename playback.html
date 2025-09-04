@@ -1,0 +1,51 @@
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"></meta>
+  <link rel="stylesheet" type="text/css" media="screen" href="playback.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery-ui.structure.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery-ui.theme.min.css" />
+
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="data-getter.js"></script>
+  <script src="playback.js"></script>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <title>Draftback</title>
+</head>
+<body class="docshow">
+  <div class="support" style="
+      position: absolute;
+      width: 250px;
+      left: 26px;
+      top: 24px;
+  ">For help, see <a href="https://draftback.com" target="_blank">draftback.com</a></div>
+  <div id="controls_container">
+    <div id="revisionSlider"></div>
+  
+    <div id="speed_control_container">
+    	<div id="speed_control"></div>
+    	<div id="speedup"></div>
+    </div>
+  
+    <div id="playback_controls">
+      <div id="realtime_container">
+        <input id="realtime" name="realtime" type="checkbox" value="1"/>
+        <label for="realtime">play at actual speed?</label>
+        <div id="timestamp"><span></span></div>
+      </div>
+    
+      <div id="playpause_button" data-playing="false"><div id="playpause_button_icon"></div></div>
+
+      <div id="leftstep"></div>
+      <div id="rightstep"></div>
+      <a href="#" id="show_stats"><span>document graphs and statistics</span><img src="/images/chart_icon.png"></a>
+    </div>
+  </div>	
+
+  <div id="page">
+    <div id="loader"><span>Loading revisions...</span> <img src="/images/ajax-circle-loader.gif"/></div>
+    <div id="tabs" style="display: none;">
+      <span id="tab_name"></span>
+    </div>
+    <div id="doc"></div>
+  </div>
+</body>

@@ -1,0 +1,23 @@
+#writing_sessions {
+  font-size: 13px;
+}
+
+#writing_sessions th {
+  text-align: left;
+}
+
+#writing_sessions td {
+  padding-right: 10px;
+}
+
+.column { display: inline-block }
+#timeline_legend, #position_legend { background: white }
+#timeline_legend .line, #position_legend .line { color: #333 }
+
+.timeline_container .detail .item.active {
+  display: none;
+}
+
+#graphs {
+  display: none;
+}

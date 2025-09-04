@@ -1,0 +1,45 @@
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"></meta>
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="stats.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="rickshaw.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="timeline_lines.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery-ui-timeline.css" />
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="d3.js"></script>
+  <script src="rickshaw.js"></script>
+  
+  <script src="data-getter-stats.js"></script>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <title>Draftback Doc Breakdown</title>
+</head>
+
+<body>
+  <h1>Document data/stats summary<sup>*</sup>:</h1>
+  
+  <p>Total time: <b id="total_duration"></b></p>
+  
+  <div id="graphs">
+    <div class="column timeline_container">
+      <h2>Timeline of activity</h2>
+    	<div id="timeline"></div>
+    </div>
+    <div class="column" id="timeline_legend"></div>
+  
+    <div class="column positions_container" style="margin-top: 10px;">
+      <h2>Where in the document were the changes?</h2>
+    	<div id="positions"></div>
+    </div>
+    <div class="column" id="position_legend"></div>
+  </div>
+  
+  <h2>Writing sessions</h2>
+  <p>This document was created over <span id="writing_session_count">0</span> distinct writing sessions (defined as periods where there wasn't more than a 10-minute gap between revisions):</p>
+  
+  <table id="writing_sessions">
+    <thead><tr><th>Span</th> <th>Duration</th> <th>User</th> <th># Revisions</th></tr></thead>
+  </table>
+  
+  <p>*Note that you may need to re-render your document's revisions to see accurate data (in the Google Doc click the Draftback button, then "Re-render").</p>
+</body>
